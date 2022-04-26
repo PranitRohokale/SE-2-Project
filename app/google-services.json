@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "672511548583",
+    "firebase_url": "https://mess-e68a3-default-rtdb.firebaseio.com",
+    "project_id": "mess-e68a3",
+    "storage_bucket": "mess-e68a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:672511548583:android:65679313ffbd544a048f82",
+        "android_client_info": {
+          "package_name": "com.example.canteenapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "672511548583-ur807ig99907nfbnfpgrjeqo4kflk2tf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWO9PNB47MVgXslRNRUVSNgEywKb42dyg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "672511548583-ur807ig99907nfbnfpgrjeqo4kflk2tf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
