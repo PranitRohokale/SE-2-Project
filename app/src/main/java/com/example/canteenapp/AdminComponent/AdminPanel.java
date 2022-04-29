@@ -34,7 +34,7 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
 public class AdminPanel extends AppCompatActivity {
-  CardView viewOderCard, addUserCard, addFoodCard, viewLogCard, viewAnalysisCard, qrLogoCard, algoLogoCard;
+  CardView viewOderCard, addUserCard, addFoodCard, viewLogCard, viewAnalysisCard, algoLogoCard;
   DatabaseReference databaseReference;
   FirebaseDatabase firebaseDatabase;
   TextView adminPanelTotalAmount;
@@ -49,7 +49,6 @@ public class AdminPanel extends AppCompatActivity {
     addUserCard = findViewById(R.id.addUserLogoCard);
     addFoodCard = findViewById(R.id.addFoodLogoCard);
     viewLogCard = findViewById(R.id.logLogoCard);
-    qrLogoCard = findViewById(R.id.QRLogoCard);
     algoLogoCard = findViewById(R.id.AlgoLogoCard);
     viewAnalysisCard = findViewById(R.id.analysisLogoCard);
     firebaseDatabase = FirebaseDatabase.getInstance();
@@ -108,10 +107,6 @@ public class AdminPanel extends AppCompatActivity {
       startActivity(intent);
     });
 
-    qrLogoCard.setOnClickListener(v -> {
-      Intent intent = new Intent(getApplicationContext(), QrCamera.class);
-      startActivity(intent);
-    });
     algoLogoCard.setOnClickListener(v -> {
       Intent intent = new Intent(getApplicationContext(), AdminAlgorithm.class);
       startActivity(intent);

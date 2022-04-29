@@ -162,10 +162,7 @@ public class OrderIteam extends AppCompatActivity {
                   String subject = "Digital Canteen - Order Complete";
                   String body = modelorder.getName() + " your order for  "
                           + modelorder.getFoodName().trim().replace("\n", "") + " is completed";
-                  Thread thread = new Thread(() -> {
-                    MailUtil.send(to, subject, body);
-                  });
-                  thread.start();
+
                   databaseReference4.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
