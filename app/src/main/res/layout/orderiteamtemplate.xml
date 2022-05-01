@@ -31,35 +31,6 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-
-        <TextView
-                android:id="@+id/tokenNo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:fontFamily="@font/poppinsmedium"
-                android:text="@string/token_no"
-                android:textColor="@color/green"
-                android:textSize="12dp"/>
-
-        <TextView
-                android:id="@+id/tokenadmin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_toRightOf="@id/tokenNo"
-                android:fontFamily="@font/poppinsmedium"
-                android:text=""
-                android:textColor="@color/green"
-                android:textSize="12dp"/>
-
-
-      </RelativeLayout>
-
-      <RelativeLayout
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-
         <TextView
                 android:id="@+id/usersnameorder"
                 android:layout_width="wrap_content"
@@ -188,14 +159,14 @@
                 android:textColor="#FFFFFF"/>
 
         <Button
-                android:id="@+id/orderredy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:background="@drawable/rounded_rectangele"
-                android:fontFamily="@font/poppinsmedium"
-                android:text="@string/ready"
-                android:textColor="#FFFFFF"/>
+            android:id="@+id/orderredy"
+            android:layout_width="122dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/rounded_rectangele"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Generate Bill"
+            android:textColor="#FFFFFF" />
 
         <Button
                 android:id="@+id/orderCancel"

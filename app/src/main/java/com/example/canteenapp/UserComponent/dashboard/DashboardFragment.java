@@ -60,7 +60,7 @@ public class DashboardFragment extends Fragment {
   String username, foodname, foodcount, foodprize, total;
   Button cancel;
   Button pay;
-  TextView dashName, dashQuantity, dashPrize, dashTotal, tokenuser, orderredytext, turn, timeDash, tokenNoOfQrCode;
+  TextView dashName, dashQuantity, dashPrize, dashTotal, tokenuser, orderredytext, timeDash, tokenNoOfQrCode;
   CardView dashcard;
   ProgressBar dashprogess;
   private QRGEncoder qrgEncoder;
@@ -79,7 +79,6 @@ public class DashboardFragment extends Fragment {
     userID = user.getUid();
     dashprogess = root.findViewById(R.id.dashprogess);
     dashprogess.setVisibility(View.VISIBLE);
-    turn = root.findViewById(R.id.turn);
     dashName = root.findViewById(R.id.dashfoodname);
     dashQuantity = root.findViewById(R.id.dashquantity);
     orderredytext = root.findViewById(R.id.orderredytext);
@@ -95,48 +94,10 @@ public class DashboardFragment extends Fragment {
     databaseReference10 = firebaseDatabase.getReference(FireBaseConstant.CONFIRMED);
     databaseReference4 = firebaseDatabase.getReference(FireBaseConstant.TODAYS_HITS);
     pay = root.findViewById(R.id.pay);
+    pay.setVisibility(getView().INVISIBLE);
 
 
-    //DASH ON CLICK
-    dashcard.setOnClickListener(v -> {
-      String inputValue = CanteenConstant.SALT + userID + CanteenConstant.DIGTIAL_CANTEEN + lineNo + CanteenConstant.SALT;
-      byte[] bytesEncoded = Base64.encodeBase64(inputValue.getBytes());
-      inputValue = new String(bytesEncoded);
-      if (inputValue.length() > 0) {
-        WindowManager manager = (WindowManager) getActivity().getSystemService(Context.WINDOW_SERVICE);
-        Display display = manager.getDefaultDisplay();
-        Point point = new Point();
-        display.getSize(point);
-        int width = point.x;
-        int height = point.y;
-        int smallerDimension = Math.min(width, height);
-        smallerDimension = smallerDimension * 3 / 4;
-        qrgEncoder = new QRGEncoder(
-                inputValue, null,
-                QRGContents.Type.TEXT,
-                smallerDimension);
-        qrgEncoder.setColorBlack(Color.BLACK);
-        qrgEncoder.setColorWhite(Color.WHITE);
-        try {
-          final Dialog dialog = new Dialog(getContext());
-          dialog.setContentView(R.layout.qr_code_view_layout);
-          dialog.setCanceledOnTouchOutside(true);
-          dialog.setCancelable(true);
-          View bottomSheetView = LayoutInflater.from(getContext()).inflate(R.layout.qr_code_view_layout, root.findViewById(R.id.qrcodeLayout));
-          ImageView qrCodeImage = bottomSheetView.findViewById(R.id.qrCodeImage);
-          TextView qrTokenNo = bottomSheetView.findViewById(R.id.tokenNoOfQrCode);
-          qrTokenNo.setText(String.valueOf(lineNo));
-          bitmap = qrgEncoder.getBitmap();
-          qrCodeImage.setImageBitmap(bitmap);
-          dialog.setContentView(bottomSheetView);
-          dialog.show();
-        } catch (Exception e) {
-          e.printStackTrace();
-        }
-      } else {
-        //TODO::what text value for qr is empty
-      }
-    });
+
 
 
     pay.setOnClickListener(v -> {
@@ -183,13 +144,12 @@ public class DashboardFragment extends Fragment {
                 foodPrize = foodPrize.replaceFirst("\n", "");
                 dashPrize.setText(foodPrize);
                 dashTotal.setText(snapshot.child("total").getValue().toString());
-                tokenuser.setText(snapshot.child("userId").getValue().toString());
                 lineNo = Integer.parseInt(snapshot.child("userId").getValue().toString());
                 timeDash.setText(CanteenUtil.ConvertMilliSecondsToPrettyTime(Long.parseLong(snapshot.child("time").getValue().toString())));
 
                 if (snapshot.child(FireBaseConstant.NOTIFICATION_ID).exists()) {
-                  orderredytext.setText("Your order is Ready");
-                  orderredytext.setVisibility(View.VISIBLE);
+                  orderredytext.setText("Your bill is issued");
+                  pay.setVisibility(View.VISIBLE);
                 }
                 final int token = Integer.parseInt(snapshot.child("userId").getValue().toString());
                 databaseReference10.addValueEventListener(new ValueEventListener() {
@@ -208,7 +168,6 @@ public class DashboardFragment extends Fragment {
                       }
                       counteroflineno = counteroflineno - 1;
                       String turnText = "Your turn is after " + counteroflineno + " " + "people";
-                      turn.setText(turnText);
                       if (counteroflineno == 0) {
                         orderredytext.setVisibility(View.VISIBLE);
                       }

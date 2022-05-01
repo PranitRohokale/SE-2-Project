@@ -71,17 +71,6 @@
                 android:orientation="horizontal">
 
           <TextView
-
-                  android:id="@+id/textView3"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_toLeftOf="@+id/tokenuser"
-                  android:fontFamily="@font/poppinsbold"
-                  android:text="@string/token_no"
-                  android:textColor="@color/green"
-                  android:textSize="12dp"/>
-
-          <TextView
                   android:id="@+id/tokenuser"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
@@ -204,15 +193,18 @@
 
 
         <Button
-                android:layout_margin="2dp"
-                android:id="@+id/pay"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:background="@drawable/rounded_rectangele"
-                android:fontFamily="@font/poppinsmedium"
-                android:text="@string/pay"
-                android:textColor="#FFFFFF"/>
+            android:id="@+id/pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/rounded_rectangele"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="@string/pay"
+            android:textColor="#FFFFFF" />
       </RelativeLayout>
 
       <LinearLayout
@@ -230,24 +222,6 @@
                 android:textColor="@color/green"
                 android:textSize="16dp"
                 android:visibility="gone"/>
-      </LinearLayout>
-
-
-      <LinearLayout
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:gravity="center"
-              android:orientation="horizontal">
-
-        <TextView
-                android:id="@+id/turn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppinsmedium"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/textSecondaryColor"
-                android:textSize="16dp"/>
       </LinearLayout>
 
 

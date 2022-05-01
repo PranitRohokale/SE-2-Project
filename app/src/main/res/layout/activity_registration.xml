@@ -114,24 +114,24 @@
                 android:textColorHint="#ffff"/>
 
         <Button
-                android:id="@+id/signup"
-                android:layout_width="325dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/rounded_rectangele"
-                android:backgroundTint="@color/green"
-                android:text="@string/signup"
-                android:textColor="#FFFFFF"/>
+            android:id="@+id/signup"
+            android:layout_width="325dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/rounded_rectangele"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:text="@string/signup"
+            android:textColor="#FFFFFF" />
       </LinearLayout>
 
       <ProgressBar
-              android:id="@+id/progressBarReg"
-              style="?android:attr/progressBarStyle"
-              android:layout_width="112dp"
-              android:layout_height="89dp"
-              android:layout_gravity="center_horizontal|center_vertical"
-              android:indeterminateTint="@color/green"/>
+          android:id="@+id/progressBarReg"
+          style="?android:attr/progressBarStyle"
+          android:layout_width="112dp"
+          android:layout_height="89dp"
+          android:layout_gravity="center_horizontal|center_vertical"
+          android:indeterminateTint="@color/green" />
 
     </FrameLayout>
   </LinearLayout>

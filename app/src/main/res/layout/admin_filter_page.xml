@@ -82,15 +82,15 @@
             android:textColor="@color/white"/>
 
     <Button
-            android:id="@+id/buttonDateInBetween"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_alignParentRight="true"
+        android:id="@+id/buttonDateInBetween"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
 
-            android:background="@drawable/confrim_button"
-            android:fontFamily="@font/poppinsmedium"
-            android:text="@string/filter"
-            android:textColor="@color/white"/>
+        android:background="@drawable/confrim_button"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="@string/filter"
+        android:textColor="@color/white" />
   </RelativeLayout>
 
   <com.anychart.AnyChartView

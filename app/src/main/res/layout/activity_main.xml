@@ -108,17 +108,18 @@
                 android:fontFamily="@font/poppinslight"
                 android:text="@string/forgot_password"
                 android:textColor="@color/textPrimaryColor"/>
-        <Button
-                android:layout_gravity="center_horizontal"
 
-                android:id="@+id/loginbutton"
-                android:layout_width="325dp"
-                android:layout_height="45dp"
-                android:background="@drawable/rounded_rectangele"
-                android:backgroundTint="@color/green"
-                android:fontFamily="@font/poppinsmedium"
-                android:text="@string/login"
-                android:textColor="@color/white"/>
+        <Button
+            android:id="@+id/loginbutton"
+
+            android:layout_width="325dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/rounded_rectangele"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="@string/login"
+            android:textColor="@color/white" />
       </LinearLayout>
 
       <ProgressBar

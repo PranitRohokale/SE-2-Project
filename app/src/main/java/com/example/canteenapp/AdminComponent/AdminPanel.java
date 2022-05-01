@@ -49,7 +49,6 @@ public class AdminPanel extends AppCompatActivity {
     addUserCard = findViewById(R.id.addUserLogoCard);
     addFoodCard = findViewById(R.id.addFoodLogoCard);
     viewLogCard = findViewById(R.id.logLogoCard);
-    algoLogoCard = findViewById(R.id.AlgoLogoCard);
     viewAnalysisCard = findViewById(R.id.analysisLogoCard);
     firebaseDatabase = FirebaseDatabase.getInstance();
     databaseReference = firebaseDatabase.getReference(FireBaseConstant.HISTORY);
@@ -107,10 +106,6 @@ public class AdminPanel extends AppCompatActivity {
       startActivity(intent);
     });
 
-    algoLogoCard.setOnClickListener(v -> {
-      Intent intent = new Intent(getApplicationContext(), AdminAlgorithm.class);
-      startActivity(intent);
-    });
   }
 
   @Override

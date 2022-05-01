@@ -13,7 +13,7 @@ import com.example.canteenapp.R;
 public class OrderViewHolder extends RecyclerView.ViewHolder {
 
   View view;
-  TextView topfoodname, topfoodprice, topfoodcount, username, total, tokenadmin, time, title;
+  TextView topfoodname, topfoodprice, topfoodcount, username, total, time, title;
   Button done, orderredy, cancel;
   CardView cardView;
 
@@ -28,7 +28,6 @@ public class OrderViewHolder extends RecyclerView.ViewHolder {
     orderredy = view.findViewById(R.id.orderredy);
     done = view.findViewById(R.id.donebutton);
     cardView = view.findViewById(R.id.cardviewfororderlist);
-    tokenadmin = view.findViewById(R.id.tokenadmin);
     time = view.findViewById(R.id.time);
     cancel = view.findViewById(R.id.orderCancel);
 

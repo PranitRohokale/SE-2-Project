@@ -103,19 +103,19 @@
                   android:src="@mipmap/view_order_logo"/>
 
           <TextView
-                  android:id="@+id/logoAdminPanelText"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_gravity="center"
-                  android:layout_marginStart="8dp"
-                  android:layout_marginTop="8dp"
-                  android:layout_marginEnd="8dp"
-                  android:layout_toRightOf="@+id/viewOrderLogo"
-                  android:fontFamily="@font/poppinsmedium"
-                  android:text="@string/order"
-                  android:textAlignment="center"
-                  android:textColor="@color/textPrimaryColor"
-                  android:textSize="18dp"/>
+              android:id="@+id/logoAdminPanelText"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_marginStart="8dp"
+              android:layout_marginTop="8dp"
+              android:layout_marginEnd="8dp"
+              android:layout_toRightOf="@+id/viewOrderLogo"
+              android:fontFamily="@font/poppinsmedium"
+              android:text="Generate Bill"
+              android:textAlignment="center"
+              android:textColor="@color/textPrimaryColor"
+              android:textSize="18dp" />
 
           <ImageView
                   android:id="@+id/viewOrderLogoLine"
@@ -165,19 +165,19 @@
                   android:src="@mipmap/add_food_logo"/>
 
           <TextView
-                  android:id="@+id/addFoodLogoText"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_gravity="center"
-                  android:layout_marginStart="8dp"
-                  android:layout_marginTop="8dp"
-                  android:layout_marginEnd="8dp"
-                  android:layout_toRightOf="@+id/addFoodLogo"
-                  android:fontFamily="@font/poppinsmedium"
-                  android:text="@string/food"
-                  android:textAlignment="center"
-                  android:textColor="@color/textPrimaryColor"
-                  android:textSize="18dp"/>
+              android:id="@+id/addFoodLogoText"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_marginStart="8dp"
+              android:layout_marginTop="8dp"
+              android:layout_marginEnd="8dp"
+              android:layout_toRightOf="@+id/addFoodLogo"
+              android:fontFamily="@font/poppinsmedium"
+              android:text="Add Food Item"
+              android:textAlignment="center"
+              android:textColor="@color/textPrimaryColor"
+              android:textSize="18dp" />
 
           <ImageView
                   android:id="@+id/addFoodLogoLine"
@@ -227,19 +227,19 @@
                   android:src="@mipmap/add_user_logo"/>
 
           <TextView
-                  android:id="@+id/addUserLogoText"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_gravity="center"
-                  android:layout_marginStart="8dp"
-                  android:layout_marginTop="8dp"
-                  android:layout_marginEnd="8dp"
-                  android:layout_toRightOf="@+id/addUserLogo"
-                  android:fontFamily="@font/poppinsmedium"
-                  android:text="@string/user"
-                  android:textAlignment="center"
-                  android:textColor="@color/textPrimaryColor"
-                  android:textSize="18dp"/>
+              android:id="@+id/addUserLogoText"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_marginStart="8dp"
+              android:layout_marginTop="8dp"
+              android:layout_marginEnd="8dp"
+              android:layout_toRightOf="@+id/addUserLogo"
+              android:fontFamily="@font/poppinsmedium"
+              android:text="Add User"
+              android:textAlignment="center"
+              android:textColor="@color/textPrimaryColor"
+              android:textSize="18dp" />
 
           <ImageView
                   android:id="@+id/addUserLogoLine"
@@ -399,60 +399,7 @@
               android:layout_marginEnd="8dp"
               android:layout_marginBottom="8dp"
               android:padding="8dp"
-              app:cardCornerRadius="25dp">
-
-        <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-          <ImageView
-                  android:id="@+id/AlgoLogo"
-                  android:layout_width="50dp"
-                  android:layout_height="50dp"
-                  android:layout_marginStart="8dp"
-                  android:layout_marginTop="8dp"
-                  android:layout_marginEnd="8dp"
-                  android:layout_marginBottom="8dp"
-                  android:src="@mipmap/bestseller" />
-
-          <TextView
-                  android:id="@+id/AlgoLogoText"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_gravity="center"
-                  android:layout_marginStart="8dp"
-                  android:layout_marginTop="8dp"
-                  android:layout_marginEnd="8dp"
-                  android:layout_toRightOf="@+id/AlgoLogo"
-                  android:fontFamily="@font/poppinsmedium"
-                  android:text="Best Selling"
-                  android:textAlignment="center"
-                  android:textColor="@color/textPrimaryColor"
-                  android:textSize="18dp" />
-
-          <ImageView
-                  android:id="@+id/AlgoLogoLine"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_below="@+id/AlgoLogoText"
-                  android:layout_marginLeft="8dp"
-                  android:layout_toRightOf="@+id/AlgoLogo"
-                  android:src="@drawable/horizantle_line"/>
-
-          <TextView
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_below="@id/AlgoLogoLine"
-                  android:layout_gravity="center"
-                  android:layout_marginStart="8dp"
-                  android:layout_toRightOf="@+id/AlgoLogo"
-                  android:fontFamily="@font/poppinsmedium"
-                  android:text="Helps determine what to sell based on data set"
-                  android:textAlignment="center"
-                  android:textColor="@color/textSecondaryColor"
-                  android:textSize="12dp"/>
-        </RelativeLayout>
-      </androidx.cardview.widget.CardView>
+              app:cardCornerRadius="25dp"/>
     </LinearLayout>
 
   </ScrollView>

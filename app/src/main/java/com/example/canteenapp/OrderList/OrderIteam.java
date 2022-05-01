@@ -100,7 +100,6 @@ public class OrderIteam extends AppCompatActivity {
                 orderViewHolder.topfoodcount.setText(modelorder.getFoodCount());
                 orderViewHolder.topfoodprice.setText(modelorder.getFoodPrize());
                 orderViewHolder.total.setText(modelorder.getTotal());
-                orderViewHolder.tokenadmin.setText(modelorder.getUserId());
                 orderViewHolder.time.setText(CanteenUtil.ConvertMilliSecondsToPrettyTime(modelorder.getTime()));
                 orderViewHolder.cancel.setOnClickListener(v -> {
                   databaseReferenceCancleConfromOrder.addValueEventListener(new ValueEventListener() {
@@ -137,10 +136,7 @@ public class OrderIteam extends AppCompatActivity {
                   String subject = "Digital Canteen - Order Ready";
                   String body = modelorder.getName() + ",Please collect your food " + " "
                           + " your order for " + modelorder.getFoodName().trim().replace("\n", "") + " is ready";
-                  Thread thread = new Thread(() -> {
-                    MailUtil.send(to, subject, body);
-                  });
-                  thread.start();
+
                 });
                 orderViewHolder.done.setOnClickListener(view -> {
                   databaseReferencesuser.child(modelorder.getUniqueId()).child("id").removeValue();
@@ -158,10 +154,7 @@ public class OrderIteam extends AppCompatActivity {
                   databaseReference2.child(String.valueOf(maxId + 1)).child("total").setValue(modelorder.getTotal());
                   databaseReference2.child(String.valueOf(maxId + 1)).child("time").setValue(modelorder.getTime());
                   databaseReference2.child(String.valueOf(maxId + 1)).child("comment").setValue("REMOVED BY ADMIN");
-                  String to = modelorder.getEmail();
-                  String subject = "Digital Canteen - Order Complete";
-                  String body = modelorder.getName() + " your order for  "
-                          + modelorder.getFoodName().trim().replace("\n", "") + " is completed";
+
 
                   databaseReference4.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
